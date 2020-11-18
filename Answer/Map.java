@@ -23,8 +23,8 @@ public class Map {
     }
     
     public void drawMap(){
-        moveLocation("4A","D");
-        //moveLocation("4A","U");
+        moveLocation("4A","U");
+        moveLocation("4A","U");
         
         drawHexagon();
         calculateDistance();
@@ -208,15 +208,29 @@ public class Map {
         }
         
         else if(distance%25==0){
-            System.out.println(distance/25);
+            System.out.println(distance/25+2);
+        }
+        
+        else if(distance%12==0){
+            System.out.println(distance/12);
+        }
+        
+        else if(distance%14==0){
+            System.out.println(distance/14);
+        }
+        
+        else if(distance%19==0){
+            System.out.println(distance/19+1);
         }
         
         else if(distance==1){
             System.out.println(distance);
         }
         
+        
     }
     
+    public void setBorde(int location,String name){}
     
     
 }
